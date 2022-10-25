@@ -18,10 +18,10 @@ class TSSTG(object):
         device: (str) Device to load the model on 'cpu' or 'cuda'.
     """
     #./Models/TSSTG/tsstg-model.pth
-    def __init__(self,skip = True,
+    def __init__(self,skip = False,
                  device='cuda'):
         if skip:
-            weight_file = ROOT / 'weights/tsstg-model-skip.pth'
+            weight_file = ROOT / 'weights/tsstg-model_skip.pth'
         else:
             weight_file = ROOT / 'weights/tsstg-model.pth'
         print("TSSTG: {}".format(str(weight_file).split("/")[-1]))
